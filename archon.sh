@@ -159,11 +159,9 @@ function chroot_stage {
 	{
 		echo "[multilib]"
 		echo "Include = /etc/pacman.d/mirrorlist"
-		echo "[archlinuxfr]"
-		echo "SigLevel = Never"
-		echo "Server = http://repo.archlinux.fr/\$arch" 
 	} >> /etc/pacman.conf
-	pacman -Syy --noconfirm yaourt
+	curl -sL https://aur.archlinux.org/cgit/aur.git/snapshot/aurman.tar.gz > aurman.tar.gz
+	tar xvzf aurman.tar.gz && cd aurman && makepkg -si
 	echo '--------------------------------------'
 	echo '15 - Προσθήκη SWAP                    '
 	echo '                                      '
