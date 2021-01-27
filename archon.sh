@@ -138,7 +138,7 @@ function initialize_desktop_selection() {
     echo
     echo "Εγκατάσταση Xorg Server"
     echo
-    installer "Xorg Server" xorg xorg-server xorg-xinit alsa-utils alsa-firmware pulseaudio pulseaudio-alsa noto-fonts	# Εγκατάσταση Xorg Server και Audio server
+    installer "Xorg Server" xorg xorg-server xorg-xinit alsa-utils alsa-firmware pulseaudio pulseaudio-alsa noto-fonts noto-fonts-emoji accountsservice	# Εγκατάσταση Xorg Server και Audio server
     echo
     PS3='Επιλέξτε ένα από τα διαθέσιμα γραφικά περιβάλλοντα : '
 
